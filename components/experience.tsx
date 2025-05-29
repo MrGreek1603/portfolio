@@ -1,43 +1,55 @@
 "use client"
 import { motion } from "framer-motion"
-import { Calendar, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Fullstack Developer",
-      company: "Tech Innovations Inc.",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
+      title: "Intern Fullstack Mobile App Developer",
+      company: "Twinkle IT Solutions",
+      location: "Goa, India",
+      period: "Recent",
       description: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Mentored junior developers and conducted code reviews",
-        "Collaborated with product team to define technical requirements",
+        "Built mobile apps with React Native and Flask backend",
+        "Integrated and managed databases for mobile applications",
+        "Deployed apps on cloud platforms",
+        "Collaborated with team on mobile app development projects",
       ],
     },
     {
-      title: "Fullstack Developer",
-      company: "Digital Solutions Ltd.",
-      location: "New York, NY",
-      period: "2020 - 2022",
+      title: "Intern Fullstack Developer",
+      company: "BELONG",
+      location: "Remote",
+      period: "2023",
       description: [
-        "Developed and maintained React-based web applications",
-        "Built RESTful APIs using Node.js and Express",
-        "Optimized database queries improving performance by 40%",
-        "Participated in agile development processes",
+        "Assisted in project development using React.js, Next.js, Node.js",
+        "Worked with MongoDB and Supabase for database management",
+        "Deployed projects on platforms like Netlify and Heroku",
+        "Gained experience in full-stack development workflows",
       ],
     },
     {
-      title: "Frontend Developer",
-      company: "Creative Agency",
-      location: "Los Angeles, CA",
-      period: "2019 - 2020",
+      title: "Frontend Web Developer",
+      company: "SEVACO GLOBAL VENTURES PRIVATE LIMITED",
+      location: "Goa, India",
+      period: "2022",
       description: [
-        "Created responsive web designs for various clients",
-        "Implemented modern JavaScript frameworks and libraries",
-        "Collaborated with designers to ensure pixel-perfect implementations",
-        "Maintained and updated existing client websites",
+        "Designed UI/UX for startup website",
+        "Implemented design into single-page web application",
+        "Collaborated with startup team on web development",
+        "Focused on creating user-friendly interfaces",
+      ],
+    },
+    {
+      title: "Intern Frontend Developer",
+      company: "Hexcoderz",
+      location: "Vasco da Gama, Goa",
+      period: "2022",
+      description: [
+        "Acquired expertise in UI/UX principles",
+        "Gained proficiency in Figma, HTML, CSS, and JavaScript",
+        "Learned frontend development best practices",
+        "Worked on various frontend development projects",
       ],
     },
   ]
@@ -80,11 +92,7 @@ const Experience = () => {
                     whileHover={{ scale: 1.02, y: -5 }}
                     className="p-6 rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan-400/50 transition-all duration-300"
                   >
-                    <div className="flex items-center gap-2 text-cyan-400 mb-2">
-                      <Calendar size={16} />
-                      <span className="text-sm">{exp.period}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-1">{exp.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-3">{exp.title}</h3>
                     <div className="flex items-center gap-2 text-gray-400 mb-4">
                       <span className="font-medium">{exp.company}</span>
                       <span>•</span>

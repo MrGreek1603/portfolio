@@ -5,34 +5,26 @@ import { ExternalLink, Github } from "lucide-react"
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration",
+      title: "Primecare - Doctor Patient Management System",
+      description: "Web app for seamless appointment scheduling and billing with integrated video consultation feature",
       image: "/placeholder.svg?height=300&width=400",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       github: "#",
       live: "#",
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management with real-time updates and team features",
+      title: "ClassCheck - Attendance Management",
+      description: "React Native app with spoof detection system for secure student attendance recording",
       image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io"],
+      technologies: ["React Native", "Flask", "Firebase"],
       github: "#",
       live: "#",
     },
     {
-      title: "AI Chat Application",
-      description: "Intelligent chatbot with natural language processing capabilities",
+      title: "DataDock - Data Management Platform",
+      description: "Web-based platform for secure file management with real-time notifications and seamless navigation",
       image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Python", "FastAPI", "OpenAI", "React"],
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Portfolio Website",
-      description: "Modern portfolio with animations and responsive design",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Next.js", "Framer Motion", "Tailwind"],
+      technologies: ["React", "TypeScript", "Tailwind", "Supabase"],
       github: "#",
       live: "#",
     },
@@ -54,7 +46,7 @@ const Projects = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">A showcase of my recent work and personal projects</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -63,7 +55,7 @@ const Projects = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group relative overflow-hidden rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan-400/50 transition-all duration-300"
+              className="group relative overflow-hidden rounded-xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-cyan-400/50 transition-all duration-300 flex flex-col"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -91,9 +83,9 @@ const Projects = () => {
                   </motion.a>
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold mb-3 text-white">{project.title}</h3>
-                <p className="text-gray-400 mb-4">{project.description}</p>
+                <p className="text-gray-400 mb-4 flex-1">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span

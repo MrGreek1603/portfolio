@@ -18,9 +18,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl font-bold"
           >
-            <span className="text-gradient">Fullstack</span>
+            <span className="text-gradient">Siddant Prabhudessai</span>
             <br />
-            <span className="text-white">Developer</span>
+            <span className="text-white">Fullstack Developer</span>
           </motion.h1>
 
           <motion.p
@@ -29,7 +29,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
           >
-            Crafting digital experiences with cutting-edge technologies and innovative solutions
+            Crafting innovative mobile and web solutions with modern technologies
           </motion.p>
 
           <motion.div
@@ -39,9 +39,9 @@ const Hero = () => {
             className="flex justify-center space-x-6"
           >
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "#contact", label: "Email" },
+              { icon: Github, href: "https://github.com/MrGreek1603", label: "GitHub" },
+              { icon: Linkedin, href: "https://linkedin.com/in/siddant-prabhudessai-5a92b6213", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:siddantprabhudessai@gmail.com", label: "Email" },
             ].map((social, index) => (
               <motion.a
                 key={social.label}
@@ -59,19 +59,22 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex justify-center space-x-4"
+            className="flex flex-col sm:flex-row justify-center items-center gap-4"
           >
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(6, 182, 212, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 w-full sm:w-auto"
+              onClick={() => {
+                window.location.href = "#projects"
+              }}
             >
               View My Work
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 border border-cyan-400 rounded-full font-semibold hover:bg-cyan-400/10 transition-all duration-300"
+              className="px-8 py-3 border border-cyan-400 rounded-full font-semibold hover:bg-cyan-400/10 transition-all duration-300 w-full sm:w-auto"
             >
               Download CV
             </motion.button>
