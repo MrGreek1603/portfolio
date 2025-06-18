@@ -74,6 +74,14 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const link = document.createElement('a')
+                link.href = '/cv.pdf'
+                link.download = 'Siddant_Prabhu_Dessai_CV.pdf'
+                document.body.appendChild(link)
+                link.click()
+                document.body.removeChild(link)
+              }}
               className="px-8 py-3 border border-cyan-400 rounded-full font-semibold hover:bg-cyan-400/10 transition-all duration-300 w-full sm:w-auto"
             >
               Download CV

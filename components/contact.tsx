@@ -11,11 +11,38 @@ const Contact = () => {
     email: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission here
+    setIsSubmitting(true)
+
+    // Create WhatsApp message
+    const whatsappMessage = `Hello! I'm interested in working with you.
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Message:* ${formData.message}
+
+Looking forward to hearing from you!`
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage)
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/917558697595?text=${encodedMessage}`
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank')
+    
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    })
+    
+    setIsSubmitting(false)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -163,13 +190,18 @@ const Contact = () => {
 
               <motion.button
                 type="submit"
+                disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold text-white hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center justify-center space-x-2 glow-cyan"
+                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold text-white hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center justify-center space-x-2 glow-cyan disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send size={20} />
-                <span>Send Message</span>
+                <span>{isSubmitting ? "Opening WhatsApp..." : "Send via WhatsApp"}</span>
               </motion.button>
+              
+              {/* <p className="text-sm text-gray-400 text-center">
+                Clicking "Send via WhatsApp" will open WhatsApp with your message pre-filled
+              </p> */}
             </form>
           </motion.div>
         </div>
