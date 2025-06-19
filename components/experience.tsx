@@ -5,6 +5,18 @@ import { MapPin } from "lucide-react"
 const Experience = () => {
   const experiences = [
     {
+      title: "Junior Fullstack Developer",
+      company: "BELONG",
+      location: "Remote",
+      period: "2023",
+      description: [
+        "Assisted in project development using React.js, Next.js, Node.js",
+        "Worked with MongoDB and Supabase for database management",
+        "Deployed projects on platforms like Netlify and Heroku",
+        "Gained experience in full-stack development workflows",
+      ],
+    },
+    {
       title: "Intern Fullstack Mobile App Developer",
       company: "Twinkle IT Solutions",
       location: "Goa, India",
@@ -16,18 +28,7 @@ const Experience = () => {
         "Collaborated with team on mobile app development projects",
       ],
     },
-    {
-      title: "Intern Fullstack Developer",
-      company: "BELONG",
-      location: "Remote",
-      period: "2023",
-      description: [
-        "Assisted in project development using React.js, Next.js, Node.js",
-        "Worked with MongoDB and Supabase for database management",
-        "Deployed projects on platforms like Netlify and Heroku",
-        "Gained experience in full-stack development workflows",
-      ],
-    },
+    
     {
       title: "Frontend Web Developer",
       company: "SEVACO GLOBAL VENTURES PRIVATE LIMITED",
