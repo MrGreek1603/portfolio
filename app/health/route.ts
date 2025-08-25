@@ -1,7 +1,10 @@
-// pages/api/health.ts (Next.js)
-import { NextApiRequest, NextApiResponse } from "next";
+// app/api/health/route.ts
+import { NextResponse } from "next/server";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+// Handles GET requests
+export async function GET() {
+  return NextResponse.json({
+    status: "ok",
+    timestamp: new Date().toISOString(),
+  });
 }
-
